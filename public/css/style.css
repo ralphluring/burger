@@ -1,0 +1,88 @@
+body{
+    background-color:antiquewhite;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.header h3{
+    text-decoration: underline;
+}
+
+.main-app{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+#burger-text{
+    border: solid 1px black;
+    background: none;
+    width: 90%;
+    height: 30px;
+    font-size: 22px;
+    margin: 20px;
+}
+
+.container h1{
+    text-align: center;
+    font-size: .8rem;
+}
+
+/* .container *{
+    border:.5px solid #000;
+} */
+
+.burger-input{
+display: flex;
+flex-direction: column;
+height: 500px;
+align-items: center;
+align-content: space-around;
+}
+
+#submit-btn{
+    background: none;
+    border: 1px solid;
+    font-weight: 900;
+}
+.uneaten .eaten{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.uneaten .eaten button{
+    background: none;
+    border: 1px solid;
+    padding: 5px;
+    height: fit-content;
+}
+
+
+.eaten h1{
+color:red;
+}
+
+.uneaten h1{
+color: green;
+}
+
+.devourit{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.devourit button{
+   height: 20px;
+   background: none;
+   border:1px solid black;
+}

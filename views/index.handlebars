@@ -1,0 +1,43 @@
+<div class="container">
+
+  <div class="header">
+    <div class="header-inner">
+      <h3>Welcome to  the Burger Eater Logger</h3>
+      <p>Type a burger into the form and save on your list</p>
+      <p>Mark them Devoured once you have Eaten them</p>
+    </div>
+  </div>
+  <div class="main-app">
+  <div class="eaten">
+    <h1>These Still need to be devoured</h1>
+        {{#each burgers}}
+          {{#unless devoured}}
+            <div id={{this.burger_id}}>
+              {{>eaten this}}
+            </div>
+          {{/unless}}
+        {{/each}}
+  </div>
+
+  <div class="burger-input">
+    <h3>Enter a burger </h3>
+    <label for="burger">Burger Name</label>
+    <input type="text" name="burger" id="burger-text">
+    <button id="submit-btn">Submit</button>
+  </div>
+
+  <div class="uneaten">
+    <h1>Devoured Burgs</h1>
+      {{#each burgers}}
+        {{#if this.devoured}}
+          <div id={{this.burger_id}}>
+            {{> burger this}}
+          </div>
+        {{/if}}
+      {{/each}}
+  </div>
+</div>
+</div>
+
+
+

@@ -39,7 +39,7 @@ router.put("/burgers", function(req, res) {
   });
 });
 
-router.delete("/burgers/:id",function(req, res){
+router.delete("/burgers/:id", (req, res) => {
   console.log(`REQ.PARAMS ${req.params.id}`)
   console.log(`REQ.BODY ${req.body.deleted}`)
   var condition = "burger_id =" + req.body.deleted;
@@ -52,7 +52,6 @@ router.delete("/burgers/:id",function(req, res){
         res.status(200).end();
         console.log("deleted");
       }
-      res.send(result);
     }
   })
 })

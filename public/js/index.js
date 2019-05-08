@@ -45,26 +45,26 @@ $("#submit-btn").on("click", function(event) {
         );
   })
 
-  $(".delete-btn").on("click", function(event){
-    event.preventDefault();
-    let filterId = $(this).data("id");
-    console.log(`id of row I want to delete:${filterId} ${typeof filterId}`);
-    let newDelete = {
-        deleted:filterId
-    }
-        // Send the PUT request.
-        $.ajax("/burgers/" + filterId, {
-            type: "DELETE",
-            data: newDelete
+  // $(".delete-btn").on("click", function(event){
+  //   event.preventDefault();
+  //   let filterId = $(this).data("id");
+  //   console.log(`id of row I want to delete:${filterId} ${typeof filterId}`);
+  //   let newDelete = {
+  //       deleted:filterId
+  //   }
+  //       // Send the PUT request.
+  //       $.ajax("/burgers/" + filterId, {
+  //           type: "DELETE",
+  //           data: newDelete
 
-          }).then(
-            function() {
-              console.log("deleted", newDelete);
-              // Reload the page to get the updated list
-              location.reload();
-            }
-        );
-  })
+  //         }).then(
+  //           function() {
+  //             console.log("deleted", newDelete);
+  //             // Reload the page to get the updated list
+  //             location.reload();
+  //           }
+  //       );
+  // })
 
 
 
